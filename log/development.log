@@ -2388,3 +2388,26 @@ Processing by RestaurantsController#index as HTML
   Rendered layouts/_navbar.html.erb (0.0ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/2/edit" for ::1 at 2015-01-21 23:21:37 -0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRestaurant Load (12.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered restaurants/_form.html.erb (148.4ms)
+  Rendered restaurants/edit.html.erb within layouts/application (158.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 752ms (Views: 514.0ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-01-21 23:24:13 -0430
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_bootstrap.html.erb (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.2ms)
